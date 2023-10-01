@@ -1,13 +1,13 @@
-package com.hollies.javaproject;
+package com.hollies.patientapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JavaProjectApplication {
+public class PatientApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JavaProjectApplication.class, args);
+		SpringApplication.run(PatientApiApplication.class, args);
 	}
 
 }
