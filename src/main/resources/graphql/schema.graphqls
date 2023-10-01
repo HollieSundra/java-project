@@ -1,0 +1,50 @@
+type Patient {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    gender: String!
+    phoneNumber: String!
+    email: String!
+    address: String!
+    visitDate: String!
+    diagnosis: String!
+    drugCode: String!
+    additionalInformation: [AdditionalInformation]
+}
+
+type AdditionalInformation {
+    notes: String!
+    newPatient: String!
+    race: String!
+    ssn: String!
+}
+
+type Query {
+    getPatient(id: ID!): Patient
+}
+
+type Mutation {
+    createPatient(patientInput: PatientInput!): Patient
+    updatePatient(id: ID!, patientInput: PatientInput!): Patient
+    deletePatient(id: ID!): Patient
+}
+
+input PatientInput {
+    firstName: String!
+    lastName: String!
+    gender: String!
+    phoneNumber: String!
+    email: String!
+    address: String!
+    visitDate: String!
+    diagnosis: String!
+    drugCode: String!
+    additionalInformation: [AdditionalInformation]
+}
+
+input AdditionalInformationInput {
+    notes: String!
+    newPatient: String!
+    race: String!
+    ssn: String!
+}
